@@ -37,7 +37,7 @@ class LoginController : UIViewController {
     }
     
     @IBAction func pressedSignUp(_ sender: Any) {
-        self.performSegue(withIdentifier: Scene.signup.rawValue, sender: self)
+        self.performSegue(withIdentifier: "SignUpSegue", sender: self)
     }
     
     @IBAction func pressedRoseFire(_ sender: Any) {
@@ -72,7 +72,6 @@ class LoginController : UIViewController {
                 self.signOut()
                 return
             }
-            print(querry?.documents.count)
             if querry?.documents.count == 0{
                 self.createUserDoc()
                 return
@@ -117,7 +116,7 @@ class LoginController : UIViewController {
         }
         DataManager.signedIn = true
         print("Successful sign in")
-        self.performSegue(withIdentifier: Scene.wishlist.rawValue, sender: self)
+        self.performSegue(withIdentifier: wishlistSegue, sender: self)
     }
     
     func createUserDoc(){
@@ -149,7 +148,7 @@ class LoginController : UIViewController {
             if !DataManager.signedIn{
                 signIn()
             }else{
-                performSegue(withIdentifier: ScenesManager.destination, sender: self)
+                performSegue(withIdentifier: wishlistSegue, sender: self)
             }
         }
     }

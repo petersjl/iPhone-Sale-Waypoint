@@ -61,7 +61,7 @@ class MenuController : UITableViewController {
     }
     
     func pressedAddGame(){
-        
+        ScenesManager.transitionTo(parent: parentView, target: Scene.addgame)
     }
     
     func pressedSignOut(){

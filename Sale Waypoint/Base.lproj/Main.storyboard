@@ -166,7 +166,7 @@
                                     <constraint firstAttribute="width" secondItem="TPa-42-b09" secondAttribute="height" multiplier="101:60" id="gX7-am-hBl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.85882352941176465" green="0.10196078431372549" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waypoint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbQ-el-NFA">
@@ -191,7 +191,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S84-0f-Rgo">
                                 <rect key="frame" x="157" y="397" width="100" height="48"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.85882352941176465" green="0.10196078431372549" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="397-Lw-rFu"/>
                                     <constraint firstAttribute="width" constant="100" id="HzS-j6-P8Y"/>
@@ -243,7 +243,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.070588235289999995" green="0.074509803920000006" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="TPa-42-b09" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="Axm-Bd-uZp"/>
                             <constraint firstItem="Om2-A9-ijo" firstAttribute="top" secondItem="TbQ-el-NFA" secondAttribute="bottom" constant="34" id="Cga-UD-0NB"/>
@@ -273,13 +273,14 @@
                         <segue destination="1Og-vr-eLK" kind="showDetail" identifier="SignUpSegue" id="2Lj-RH-Bpr"/>
                         <segue destination="HlZ-2a-zIH" kind="show" identifier="ToWishlistSegue" id="ukn-RR-vVy"/>
                         <segue destination="Xr1-cW-FhI" kind="show" identifier="ToGameListSegue" id="uIt-89-DyJ"/>
+                        <segue destination="auu-zW-Qcr" kind="show" id="bw5-7F-nrl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="112.5"/>
         </scene>
-        <!--Wishlist Controller-->
+        <!--Wishlist-->
         <scene sceneID="3bE-gV-7Ve">
             <objects>
                 <tableViewController storyboardIdentifier="WishlistView" id="HlZ-2a-zIH" customClass="WishlistController" customModule="Sale_Waypoint" customModuleProvider="target" sceneMemberID="viewController">
@@ -406,7 +407,7 @@
                             <outlet property="delegate" destination="HlZ-2a-zIH" id="ClG-cY-Mgc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="pFj-i0-02n"/>
+                    <navigationItem key="navigationItem" title="Wishlist" largeTitleDisplayMode="always" id="pFj-i0-02n"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zka-NZ-gRv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -494,6 +495,22 @@
             </objects>
             <point key="canvasLocation" x="1040.5797101449275" y="787.5"/>
         </scene>
+        <!--Add a Game-->
+        <scene sceneID="XFI-r0-iiF">
+            <objects>
+                <viewController storyboardIdentifier="AddGameView" id="auu-zW-Qcr" customClass="AddGameController" customModule="Sale_Waypoint" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZcC-f1-Ob8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="OJy-jA-DoB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add a Game" largeTitleDisplayMode="always" id="Jva-9b-5nE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TQS-so-0xE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1903" y="788"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="wNg-xf-Xqg">
             <objects>
@@ -504,6 +521,14 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.070588235289999995" green="0.074509803920000006" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.16740359530000001" green="0.17603264660000001" blue="0.16839160689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="24"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="24"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -514,7 +539,7 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="112.5"/>
         </scene>
-        <!--Games List Controller-->
+        <!--Games-->
         <scene sceneID="Ylb-iZ-m5E">
             <objects>
                 <tableViewController storyboardIdentifier="GameListView" id="Xr1-cW-FhI" customClass="GamesListController" customModule="Sale_Waypoint" customModuleProvider="target" sceneMemberID="viewController">
@@ -641,7 +666,7 @@
                             <outlet property="delegate" destination="Xr1-cW-FhI" id="orc-O6-OZ2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="YPV-PM-Vaf"/>
+                    <navigationItem key="navigationItem" title="Games" largeTitleDisplayMode="always" id="YPV-PM-Vaf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jQX-wj-WU4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

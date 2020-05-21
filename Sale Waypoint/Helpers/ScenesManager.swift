@@ -10,10 +10,9 @@ import UIKit
 import FirebaseAuth
 
 enum Scene : String {
-    case wishlist = "ToWishlistSegue"
-    case signup = "SignUpSegue"
-    case games = "ToGameListSegue"
-    case addgame = "1"
+    case wishlist = "WishlistView"
+    case games = "GameListView"
+    case addgame = "AddGameView"
 }
 
 class ScenesManager{
@@ -37,8 +36,8 @@ class ScenesManager{
     }
     
     static func transitionTo(parent: UIViewController, target: Scene){
-        self.destination = target.rawValue
-        parent.navigationController?.popToRootViewController(animated: true)
+        let viewcon = storyboard!.instantiateViewController(withIdentifier: target.rawValue)
+        parent.navigationController?.pushViewController(viewcon, animated: true)
     }
     
     
