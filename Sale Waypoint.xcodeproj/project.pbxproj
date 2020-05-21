@@ -3,19 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0414196AA8961D2D3A95506E /* Pods_Sale_Waypoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C63CA567DC49047CEF5DBE94 /* Pods_Sale_Waypoint.framework */; };
+		0A8239972474EBE4005EFC71 /* GameTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8239962474EBE4005EFC71 /* GameTableCell.swift */; };
+		0A8239992474F4E8005EFC71 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8239982474F4E8005EFC71 /* DataManager.swift */; };
+		0A82399B247548B8005EFC71 /* GamesListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A82399A247548B8005EFC71 /* GamesListController.swift */; };
 		0AEB71792464CE0D00AD7C0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB71782464CE0D00AD7C0E /* AppDelegate.swift */; };
 		0AEB717B2464CE0D00AD7C0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB717A2464CE0D00AD7C0E /* SceneDelegate.swift */; };
 		0AEB717D2464CE0D00AD7C0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB717C2464CE0D00AD7C0E /* ViewController.swift */; };
 		0AEB71802464CE0D00AD7C0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AEB717E2464CE0D00AD7C0E /* Main.storyboard */; };
 		0AEB71822464CE0F00AD7C0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AEB71812464CE0F00AD7C0E /* Assets.xcassets */; };
 		0AEB71852464CE0F00AD7C0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AEB71832464CE0F00AD7C0E /* LaunchScreen.storyboard */; };
+		0AF61BB124736EAF0018A4DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0AF61BB024736EAF0018A4DA /* GoogleService-Info.plist */; };
+		0AF61BB32473882E0018A4DA /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF61BB22473882E0018A4DA /* LoginController.swift */; };
+		0AF61BB524738D020018A4DA /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF61BB424738D020018A4DA /* SignUpController.swift */; };
+		0AF61BB724738FBD0018A4DA /* WishlistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF61BB624738FBD0018A4DA /* WishlistController.swift */; };
+		0AF61BB92474858D0018A4DA /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF61BB82474858D0018A4DA /* SlideInTransition.swift */; };
+		0AF61BBB247489530018A4DA /* ScenesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF61BBA247489530018A4DA /* ScenesManager.swift */; };
+		0AF61BBD2474B1B70018A4DA /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF61BBC2474B1B70018A4DA /* MenuController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A8239962474EBE4005EFC71 /* GameTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableCell.swift; sourceTree = "<group>"; };
+		0A8239982474F4E8005EFC71 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		0A82399A247548B8005EFC71 /* GamesListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListController.swift; sourceTree = "<group>"; };
 		0AEB71752464CE0D00AD7C0E /* Sale Waypoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sale Waypoint.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AEB71782464CE0D00AD7C0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AEB717A2464CE0D00AD7C0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +38,16 @@
 		0AEB71812464CE0F00AD7C0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AEB71842464CE0F00AD7C0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AEB71862464CE0F00AD7C0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AF61BB024736EAF0018A4DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		0AF61BB22473882E0018A4DA /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		0AF61BB424738D020018A4DA /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		0AF61BB624738FBD0018A4DA /* WishlistController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistController.swift; sourceTree = "<group>"; };
+		0AF61BB82474858D0018A4DA /* SlideInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
+		0AF61BBA247489530018A4DA /* ScenesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenesManager.swift; sourceTree = "<group>"; };
+		0AF61BBC2474B1B70018A4DA /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		6BFED9A97F1A45189E44F664 /* Pods-Sale Waypoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sale Waypoint.debug.xcconfig"; path = "Target Support Files/Pods-Sale Waypoint/Pods-Sale Waypoint.debug.xcconfig"; sourceTree = "<group>"; };
+		C63CA567DC49047CEF5DBE94 /* Pods_Sale_Waypoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sale_Waypoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE9F6F5797142622A8C95BBA /* Pods-Sale Waypoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sale Waypoint.release.xcconfig"; path = "Target Support Files/Pods-Sale Waypoint/Pods-Sale Waypoint.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +55,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0414196AA8961D2D3A95506E /* Pods_Sale_Waypoint.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0499F0556A3C67E69CF3AA24 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6BFED9A97F1A45189E44F664 /* Pods-Sale Waypoint.debug.xcconfig */,
+				DE9F6F5797142622A8C95BBA /* Pods-Sale Waypoint.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		0AEB716C2464CE0D00AD7C0E = {
 			isa = PBXGroup;
 			children = (
 				0AEB71772464CE0D00AD7C0E /* Sale Waypoint */,
 				0AEB71762464CE0D00AD7C0E /* Products */,
+				0499F0556A3C67E69CF3AA24 /* Pods */,
+				EA2CA6E02D38E28E13AF1D00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,9 +98,51 @@
 				0AEB717E2464CE0D00AD7C0E /* Main.storyboard */,
 				0AEB71812464CE0F00AD7C0E /* Assets.xcassets */,
 				0AEB71832464CE0F00AD7C0E /* LaunchScreen.storyboard */,
+				0AF61BB024736EAF0018A4DA /* GoogleService-Info.plist */,
 				0AEB71862464CE0F00AD7C0E /* Info.plist */,
+				0AF61BBF2474B2850018A4DA /* LoginSceens */,
+				0AF61BBE2474B24D0018A4DA /* MainSceens */,
+				0AF61BC02474B2980018A4DA /* Helpers */,
 			);
 			path = "Sale Waypoint";
+			sourceTree = "<group>";
+		};
+		0AF61BBE2474B24D0018A4DA /* MainSceens */ = {
+			isa = PBXGroup;
+			children = (
+				0AF61BB624738FBD0018A4DA /* WishlistController.swift */,
+				0A82399A247548B8005EFC71 /* GamesListController.swift */,
+				0A8239962474EBE4005EFC71 /* GameTableCell.swift */,
+			);
+			path = MainSceens;
+			sourceTree = "<group>";
+		};
+		0AF61BBF2474B2850018A4DA /* LoginSceens */ = {
+			isa = PBXGroup;
+			children = (
+				0AF61BB22473882E0018A4DA /* LoginController.swift */,
+				0AF61BB424738D020018A4DA /* SignUpController.swift */,
+			);
+			path = LoginSceens;
+			sourceTree = "<group>";
+		};
+		0AF61BC02474B2980018A4DA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0AF61BBA247489530018A4DA /* ScenesManager.swift */,
+				0AF61BB82474858D0018A4DA /* SlideInTransition.swift */,
+				0AF61BBC2474B1B70018A4DA /* MenuController.swift */,
+				0A8239982474F4E8005EFC71 /* DataManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EA2CA6E02D38E28E13AF1D00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C63CA567DC49047CEF5DBE94 /* Pods_Sale_Waypoint.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +152,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AEB71892464CE0F00AD7C0E /* Build configuration list for PBXNativeTarget "Sale Waypoint" */;
 			buildPhases = (
+				2A509013756080557C407DBD /* [CP] Check Pods Manifest.lock */,
 				0AEB71712464CE0D00AD7C0E /* Sources */,
 				0AEB71722464CE0D00AD7C0E /* Frameworks */,
 				0AEB71732464CE0D00AD7C0E /* Resources */,
+				125F6E38191A0744D7525D31 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AEB71852464CE0F00AD7C0E /* LaunchScreen.storyboard in Resources */,
+				0AF61BB124736EAF0018A4DA /* GoogleService-Info.plist in Resources */,
 				0AEB71822464CE0F00AD7C0E /* Assets.xcassets in Resources */,
 				0AEB71802464CE0D00AD7C0E /* Main.storyboard in Resources */,
 			);
@@ -133,12 +214,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		125F6E38191A0744D7525D31 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sale Waypoint/Pods-Sale Waypoint-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sale Waypoint/Pods-Sale Waypoint-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sale Waypoint/Pods-Sale Waypoint-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A509013756080557C407DBD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sale Waypoint-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0AEB71712464CE0D00AD7C0E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AF61BB724738FBD0018A4DA /* WishlistController.swift in Sources */,
+				0AF61BBD2474B1B70018A4DA /* MenuController.swift in Sources */,
+				0AF61BB524738D020018A4DA /* SignUpController.swift in Sources */,
+				0AF61BBB247489530018A4DA /* ScenesManager.swift in Sources */,
+				0A8239972474EBE4005EFC71 /* GameTableCell.swift in Sources */,
 				0AEB717D2464CE0D00AD7C0E /* ViewController.swift in Sources */,
+				0AF61BB32473882E0018A4DA /* LoginController.swift in Sources */,
+				0AF61BB92474858D0018A4DA /* SlideInTransition.swift in Sources */,
+				0A8239992474F4E8005EFC71 /* DataManager.swift in Sources */,
+				0A82399B247548B8005EFC71 /* GamesListController.swift in Sources */,
 				0AEB71792464CE0D00AD7C0E /* AppDelegate.swift in Sources */,
 				0AEB717B2464CE0D00AD7C0E /* SceneDelegate.swift in Sources */,
 			);
@@ -282,6 +414,7 @@
 		};
 		0AEB718A2464CE0F00AD7C0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BFED9A97F1A45189E44F664 /* Pods-Sale Waypoint.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +432,7 @@
 		};
 		0AEB718B2464CE0F00AD7C0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE9F6F5797142622A8C95BBA /* Pods-Sale Waypoint.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,26 @@
+{
+  "name": "Rosefire",
+  "version": "3.0.0beta",
+  "summary": "Rosefire iOS Library",
+  "description": "Library for Rose-Hulman login on iOS",
+  "homepage": "https://rosefire.csse.rose-hulman.edu",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Tyler Rockwood": "rockwotj@gmail.com"
+  },
+  "source": {
+    "git": "https://ada.csse.rose-hulman.edu/rosefire/ios-sdk.git",
+    "tag": "3.0.0beta"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source_files": "Rosefire/Classes/**/*",
+  "frameworks": [
+    "UIKit",
+    "WebKit"
+  ]
+}
