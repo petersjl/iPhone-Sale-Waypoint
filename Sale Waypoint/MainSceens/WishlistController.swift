@@ -2,8 +2,8 @@
 //  WishlistController.swift
 //  Sale Waypoint
 //
-//  Created by CSSE Department on 5/18/20.
-//  Copyright © 2020 CSSE Department. All rights reserved.
+//  Created by Joseph Peters on 5/18/20.
+//  Copyright © 2020 Joseph Peters. All rights reserved.
 //
 
 import UIKit
