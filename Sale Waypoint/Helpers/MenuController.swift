@@ -29,23 +29,18 @@ class MenuController : UITableViewController {
         let menu = MenuType(rawValue: indexPath.row)
         switch(menu){
         case .wishlist:
-            print("Pressed wishlist")
             self.dismiss(animated: true)
             pressedWishlist()
         case .games:
-            print("Pressed games")
             self.dismiss(animated: true)
             pressedGames()
         case .addgame:
-            print("Pressed add game")
             self.dismiss(animated: true)
             pressedAddGame()
         case .signout:
-            print("Pressed sign out")
             self.dismiss(animated: true)
             pressedSignOut()
         case .cancel:
-            print("Pressed cancel")
             self.dismiss(animated: true)
         case .none:
             return

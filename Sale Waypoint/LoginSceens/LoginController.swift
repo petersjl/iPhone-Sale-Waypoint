@@ -49,10 +49,10 @@ class LoginController : UIViewController {
             return
           }
          // print("Result = \(result!.token!)")
-          print("Result = \(result!.username!)")
-          print("Result = \(result!.name!)")
-          print("Result = \(result!.email!)")
-          print("Result = \(result!.group!)")
+//          print("Result = \(result!.username!)")
+//          print("Result = \(result!.name!)")
+//          print("Result = \(result!.email!)")
+//          print("Result = \(result!.group!)")
             Auth.auth().signIn(withCustomToken: result!.token) { (authResult, error) in
                 if let error = error {
                   print("Firebase sign in error! \(error)")
@@ -65,7 +65,6 @@ class LoginController : UIViewController {
     }
     
     func signIn(){
-        print("Signing in user: \(Auth.auth().currentUser?.uid)")
         let ref = DataManager.usersRef
         userListener = ref.whereField("uid", isEqualTo: Auth.auth().currentUser!.uid).addSnapshotListener { (querry, error) in
             if let error = error{
@@ -81,35 +80,9 @@ class LoginController : UIViewController {
             DataManager.userRef = first?.reference
             self.finishSignIn()
         }
-        
-        
-        
-//        print(DataManager.gamesRef)
-//        let listener = DataManager.gamesRef.addSnapshotListener({ (snapshot, error) in
-//            if let error = error{
-//                print("Error getting user document reference \n \(error)")
-//                self.signOut()
-//                return
-//            }
-//            print("Signed in user id: \(Auth.auth().currentUser!.uid)")
-//            snapshot!.documents.forEach({ (document) in
-//                print(document)
-//            })
-//            DataManager.userRef = snapshot?.documents.first?.reference
-//        })
-//        listener.remove()
-//        if(DataManager.userRef == nil){
-//            print("Error finding user document")
-//            self.signOut()
-//            return
-//        }
-//        signedIn = true
-//        print("Successful sign in")
-//        self.performSegue(withIdentifier: Scene.wishlist.rawValue, sender: self)
     }
     
     func finishSignIn(){
-        print("userRef: \(DataManager.userRef)")
         userListener.remove()
         if DataManager.userRef == nil{
             print("Could not assign userRef")
@@ -141,6 +114,7 @@ class LoginController : UIViewController {
         do{
             try Auth.auth().signOut()
             print("Signed out with error")
+            ScenesManager.showError(parent: self, title: "Sign in Error", message: "Error trying to sign in. \n Signed user out")
         }catch{
             print("Error signing out from error")
         }
