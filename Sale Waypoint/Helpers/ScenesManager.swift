@@ -39,7 +39,13 @@ class ScenesManager{
         let viewcon = storyboard!.instantiateViewController(withIdentifier: target.rawValue)
         parent.navigationController?.pushViewController(viewcon, animated: true)
     }
-    
+    static func showError(parent: UIViewController, title: String, message: String){
+        let alertController = UIAlertController(title: title,
+                                                message: message,
+                                                preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Okay", style: .cancel, handler: nil))
+        parent.present(alertController, animated: true, completion: nil)
+    }
     
 }
 
