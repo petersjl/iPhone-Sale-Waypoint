@@ -2,13 +2,15 @@
 //  AddGameController.swift
 //  Sale Waypoint
 //
-//  Created by CSSE Department on 5/21/20.
-//  Copyright © 2020 CSSE Department. All rights reserved.
+//  Created by Joseph Peters on 5/21/20.
+//  Copyright © 2020 Joseph Peters. All rights reserved.
 //
 
 import UIKit
+import FirebaseAuth
 
 class AddGameController : UIViewController {
+    var authListenerHandle : AuthStateDidChangeListenerHandle!
     
     @IBOutlet weak var titleText: UITextField!
     @IBOutlet weak var priceText: UITextField!
@@ -21,6 +23,16 @@ class AddGameController : UIViewController {
     navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 30)], for: .normal)
         navigationItem.leftBarButtonItem?.tintColor = UIColor(displayP3Red: 220/255, green: 26/255, blue: 0, alpha: 1)
       
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        authListenerHandle = Auth.auth().addStateDidChangeListener({ (auth, user) in
+            if Auth.auth().currentUser == nil{
+                ScenesManager.destination = Scene.wishlist.rawValue
+                self.navigationController?.popToRootViewController(animated: true)
+            }
+        })
     }
     
     @objc func menu(){

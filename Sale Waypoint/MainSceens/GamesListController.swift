@@ -15,6 +15,7 @@ class GamesListController : UITableViewController {
     var games = [QueryDocumentSnapshot]()
     
     let cellIdentifier = "GameCell"
+    let detailSegue = "GameDetail"
     
     
     override func viewDidLoad() {
@@ -75,6 +76,15 @@ class GamesListController : UITableViewController {
         cell.playstationSale!.text = (games[indexPath.row].get("psSale") as! NSNumber).stringValue + "%"
         cell.nintendoSale!.text = (games[indexPath.row].get("nintendoSale") as! NSNumber).stringValue + "%"
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == detailSegue {
+            if let indexPath = tableView.indexPathForSelectedRow{
+                let dest = segue.destination as! GameDetailController
+                dest.game = games[indexPath.row].reference
+            }
+        }
     }
 }
 

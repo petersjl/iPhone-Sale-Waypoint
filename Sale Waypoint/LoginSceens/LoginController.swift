@@ -15,6 +15,7 @@ class LoginController : UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    var userListener : ListenerRegistration!
     let signUpSegue = "SignUpSegue"
     let wishlistSegue = "ToWishlistSegue"
     let REGISTRY_TOKEN = "bf49ca66-1a09-408c-a84f-5b66667f9e74"
@@ -66,7 +67,7 @@ class LoginController : UIViewController {
     func signIn(){
         print("Signing in user: \(Auth.auth().currentUser?.uid)")
         let ref = DataManager.usersRef
-        let lis = ref.whereField("uid", isEqualTo: Auth.auth().currentUser!.uid).addSnapshotListener { (querry, error) in
+        userListener = ref.whereField("uid", isEqualTo: Auth.auth().currentUser!.uid).addSnapshotListener { (querry, error) in
             if let error = error{
                 print("Error making listener \n \(error)")
                 self.signOut()
@@ -109,6 +110,7 @@ class LoginController : UIViewController {
     
     func finishSignIn(){
         print("userRef: \(DataManager.userRef)")
+        userListener.remove()
         if DataManager.userRef == nil{
             print("Could not assign userRef")
             signOut()
@@ -121,6 +123,7 @@ class LoginController : UIViewController {
     
     func createUserDoc(){
         print("Creating new user document")
+        userListener.remove()
         DataManager.usersRef.addDocument(data: [
             "uid" : Auth.auth().currentUser!.uid,
             "wishlist" : []]) { (error) in
@@ -128,11 +131,13 @@ class LoginController : UIViewController {
                     print("Error creating new user document \n \(error)")
                     return
                 }
+                self.signIn()
         }
-        signIn()
+        
     }
     
     func signOut(){
+        userListener.remove()
         do{
             try Auth.auth().signOut()
             print("Signed out with error")

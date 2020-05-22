@@ -18,6 +18,7 @@ class WishlistController : UITableViewController {
     var games = [DocumentReference]()
     var gamesSnapshots = [DocumentSnapshot]()
     let cellIdentifier = "GameCell"
+    let detailSegue = "GameDetail"
     var reloading = false
     var loadedOnce = false
     
@@ -47,7 +48,6 @@ class WishlistController : UITableViewController {
                 return
             }
             self.games = (document?.get("wishlist") as! [DocumentReference])
-            print(self.games)
             if !self.reloading{self.reloadGames()}
             self.loadedOnce = true
         })
@@ -64,7 +64,6 @@ class WishlistController : UITableViewController {
     
     func reloadGames(){
         reloading = true
-        print("Reloading games")
         gamesSnapshots.removeAll()
         for game in games{
             game.getDocument { (snapshot, error) in
@@ -72,7 +71,6 @@ class WishlistController : UITableViewController {
                     print("Error getting game snapshot \n \(error)")
                     return
                 }
-                print(snapshot!.data())
                 self.gamesSnapshots.append(snapshot!)
                 if self.games.count == self.gamesSnapshots.count{
                     self.tableView.reloadData()
@@ -88,8 +86,6 @@ class WishlistController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! GameTableCell
-        print("Index path: \(indexPath.row)")
-        print("Arraysize: \(gamesSnapshots.count)")
         cell.gameTitle.text = (gamesSnapshots[indexPath.row].get("title") as! String)
         cell.gamePrice.text = "$" + (gamesSnapshots[indexPath.row].get("price") as! NSNumber).stringValue
         cell.playstationSale.text = (gamesSnapshots[indexPath.row].get("psSale") as! NSNumber).stringValue + "%"
@@ -104,6 +100,14 @@ class WishlistController : UITableViewController {
         userListener.remove()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == detailSegue {
+            if let indexPath = tableView.indexPathForSelectedRow{
+                let dest = segue.destination as! GameDetailController
+                dest.game = games[indexPath.row]
+            }
+        }
+    }
     
 }
 
