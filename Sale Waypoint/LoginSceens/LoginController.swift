@@ -20,14 +20,14 @@ class LoginController : UIViewController {
     let wishlistSegue = "ToWishlistSegue"
     let REGISTRY_TOKEN = "bf49ca66-1a09-408c-a84f-5b66667f9e74"
     
-    @IBAction func tempLogin(_ sender: Any) {
-        Auth.auth().signIn(withEmail: "a@b.com", password: "123456") { (result, error) in
-            if let error = error{
-                print("Auto sign in error \n \(error)")
-            }
-            self.signIn()
-        }
-    }
+//    @IBAction func tempLogin(_ sender: Any) {
+//        Auth.auth().signIn(withEmail: "a@b.com", password: "123456") { (result, error) in
+//            if let error = error{
+//                print("Auto sign in error \n \(error)")
+//            }
+//            self.signIn()
+//        }
+//    }
     @IBAction func pressedLogin(_ sender: Any) {
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (result, error) in
             if let error = error{
@@ -38,7 +38,7 @@ class LoginController : UIViewController {
                     return
                 }
                 if strerr.contains("user record") {
-                    ScenesManager.showError(parent: self, title: "Login Error", message: "The provided email address does not exits.")
+                    ScenesManager.showError(parent: self, title: "Login Error", message: "There is no account associated with the given email address.")
                     return
                 }
                 if strerr.contains("badly formatted") {

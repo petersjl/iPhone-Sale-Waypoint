@@ -45,7 +45,7 @@ class GamesListController : UITableViewController {
     }
     
     func startListening(){
-        let query = DataManager.gamesRef.order(by: "title", descending: true).limit(to: 50)
+        let query = DataManager.gamesRef.order(by: "title", descending: false).limit(to: 50)
         gamesListener = query.addSnapshotListener { (querySnapshot, error) in
             self.games.removeAll()
             if let querySnapshot = querySnapshot {
