@@ -106,7 +106,7 @@ class WishlistController : UITableViewController {
         if segue.identifier == detailSegue {
             if let indexPath = tableView.indexPathForSelectedRow{
                 let dest = segue.destination as! GameDetailController
-                dest.game = games[indexPath.row]
+                dest.game = gamesSnapshots[indexPath.row].reference
             }
         }
     }

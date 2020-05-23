@@ -141,9 +141,15 @@ class LoginController : UIViewController {
             if !DataManager.signedIn{
                 signIn()
             }else{
+         
                 performSegue(withIdentifier: wishlistSegue, sender: self)
             }
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.emailTextField.text = ""
+        self.passwordTextField.text = ""
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
