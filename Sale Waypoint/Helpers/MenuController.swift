@@ -62,6 +62,7 @@ class MenuController : UITableViewController {
     func pressedSignOut(){
         do{
             try Auth.auth().signOut()
+            DataManager.signedIn = false
         }catch{
             print("Error signing out")
         }

@@ -65,6 +65,7 @@ class WishlistController : UITableViewController {
     func reloadGames(){
         reloading = true
         gamesSnapshots.removeAll()
+        tableView.reloadData()
         for game in games{
             game.getDocument { (snapshot, error) in
                 if let error = error {
@@ -77,11 +78,12 @@ class WishlistController : UITableViewController {
                     self.reloading = false
                 }
             }
+            
         }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gamesSnapshots.count
+        return gamesSnapshots.count == games.count ? gamesSnapshots.count : 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

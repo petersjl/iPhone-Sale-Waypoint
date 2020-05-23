@@ -112,9 +112,13 @@ class GameDetailController : UIViewController{
         }
         alertController.addAction(UIAlertAction(title: "Update", style: .default, handler: { (action) in
             let num = Int(alertController.textFields![0].text!)
-            if num == nil {ScenesManager.showError(parent: self, title: "Error", message: "Entered non number value for sale")}
+            if num == nil {
+                ScenesManager.showError(parent: self, title: "Error", message: "Entered non number value for sale")
+                return
+            }
             if num! > 100 || num! < 0 {
                 ScenesManager.showError(parent: self, title: "Error", message: "Sale must be between 0 and 100")
+                return
             }
             self.game.updateData(["steamSale" : num! as NSNumber])
         }))
@@ -131,9 +135,13 @@ class GameDetailController : UIViewController{
         }
         alertController.addAction(UIAlertAction(title: "Update", style: .default, handler: { (action) in
             let num = Int(alertController.textFields![0].text!)
-            if num == nil {ScenesManager.showError(parent: self, title: "Error", message: "Entered non number value for sale")}
+            if num == nil {
+                ScenesManager.showError(parent: self, title: "Error", message: "Entered non number value for sale")
+                return
+            }
             if num! > 100 || num! < 0 {
                 ScenesManager.showError(parent: self, title: "Error", message: "Sale must be between 0 and 100")
+                return
             }
             self.game.updateData(["psSale" : num! as NSNumber])
         }))
@@ -149,9 +157,13 @@ class GameDetailController : UIViewController{
         }
         alertController.addAction(UIAlertAction(title: "Update", style: .default, handler: { (action) in
             let num = Int(alertController.textFields![0].text!)
-            if num == nil {ScenesManager.showError(parent: self, title: "Error", message: "Entered non number value for sale")}
+            if num == nil {
+                ScenesManager.showError(parent: self, title: "Error", message: "Entered non number value for sale")
+                return
+            }
             if num! > 100 || num! < 0 {
                 ScenesManager.showError(parent: self, title: "Error", message: "Sale must be between 0 and 100")
+                return
             }
             self.game.updateData(["nintendoSale" : num! as NSNumber])
         }))

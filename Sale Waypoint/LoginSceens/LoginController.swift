@@ -32,6 +32,21 @@ class LoginController : UIViewController {
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (result, error) in
             if let error = error{
                 print("Error signing in with Email/Password \n \(error)")
+                let strerr = error.localizedDescription
+                if strerr.contains("password") {
+                    ScenesManager.showError(parent: self, title: "Login Error", message: "The entered password is incorrect.")
+                    return
+                }
+                if strerr.contains("user record") {
+                    ScenesManager.showError(parent: self, title: "Login Error", message: "The provided email address does not exits.")
+                    return
+                }
+                if strerr.contains("badly formatted") {
+                    ScenesManager.showError(parent: self, title: "Login Error", message: "Email address is poorly formatted.")
+                    return
+                }
+                ScenesManager.showError(parent: self, title: "Login Error", message: "An unknown error occoured.")
+                return
             }
             self.signIn()
         }
@@ -90,7 +105,6 @@ class LoginController : UIViewController {
             return
         }
         DataManager.signedIn = true
-        print("Successful sign in")
         self.performSegue(withIdentifier: wishlistSegue, sender: self)
     }
     
@@ -129,6 +143,12 @@ class LoginController : UIViewController {
             }else{
                 performSegue(withIdentifier: wishlistSegue, sender: self)
             }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == signUpSegue {
+            (segue.destination as! SignUpController).presenter = self
         }
     }
 }
